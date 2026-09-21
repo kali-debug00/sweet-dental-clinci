@@ -7,6 +7,7 @@ import { FadeIn } from '@/components/ScrollAnimation';
 
 // Code-split heavy interactive sub-sections
 const TrustSection = lazy(() => import('@/components/TrustSection'));
+const TeamSection = lazy(() => import('@/components/TeamSection'));
 const ReviewsSection = lazy(() => import('@/components/ReviewsSection'));
 
 function SectionLoadingFallback() {
@@ -149,7 +150,12 @@ export default function AboutView() {
         </div>
       </section>
 
-      {/* 3. Verified Patient Reviews Showcase (Code-split with Suspense) */}
+      {/* 3. Meet the Team: Dentists & Hygienists with Hover Bios & Gentle Philosophy */}
+      <Suspense fallback={<SectionLoadingFallback />}>
+        <TeamSection />
+      </Suspense>
+
+      {/* 4. Verified Patient Reviews Showcase (Code-split with Suspense) */}
       <Suspense fallback={<SectionLoadingFallback />}>
         <ReviewsSection />
       </Suspense>
