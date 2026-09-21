@@ -1,0 +1,6 @@
+{
+  "name": "Sweet Dental - Family & Pediatric Dentistry",
+  "description": "Gentle, expert family and pediatric dental care in San Juan, TX with evening and Saturday hours, backed by over 760 five-star reviews.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-source-sans), "Source Sans 3", system-ui, sans-serif;
+
+  --color-sand: #F9F8F4;
+  --color-forest: #2D3A31;
+  --color-sage: #8C9A84;
+  --color-clay: #EFEBE4;
+  --color-stone: #E6E2DA;
+  --color-gold: #C9944A;
+  --color-terracotta: #C27B66;
+  --color-teal-soft: #387B75;
+  --color-teal-pale: #EDF5F4;
+}
+
+/* Custom Botanical Radii & Shadows */
+.arch-top {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.shadow-botanical-sm {
+  box-shadow: 0 4px 6px -1px rgba(45, 58, 49, 0.05);
+}
+
+.shadow-botanical-md {
+  box-shadow: 0 10px 15px -3px rgba(45, 58, 49, 0.05);
+}
+
+.shadow-botanical-lg {
+  box-shadow: 0 20px 40px -10px rgba(45, 58, 49, 0.06);
+}
+
+.shadow-botanical-xl {
+  box-shadow: 0 25px 50px -12px rgba(45, 58, 49, 0.12);
+}
+
+/* Graceful fallbacks for users preferring reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  html:focus-within {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
